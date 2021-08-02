@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{-- TODO --}}">Cadastrar</a>
+                        <a class="nav-link" href="{{ route('livros.index') }}">Cadastrar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{-- TODO --}}">Editar</a>
