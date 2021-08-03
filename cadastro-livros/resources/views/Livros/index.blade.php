@@ -13,21 +13,21 @@
         </div>
     </div>
 
-    @if (session('msg-sucess'))
-    <div class="alert alert-sucess" role="alert">
-        {{ session('msg_sucess') }}
+    @if (session('msg_success'))
+    <div class="alert alert-success" role="alert">
+        {{ session('msg_success') }}
     </div>        
     @endif
 
-    @if (session('msg-error'))
+    @if (session('msg_error'))
     <div class="alert alert-danger" role="alert">
-        {{ session('error') }}
+        {{ session('msg_error') }}
     </div>        
     @endif
 
     {{-- TODO --}}
     <div class="row">
-        <div class="col=md-12">
+        <div class="col-md-12">
 
             <table class="table table-striped">
                 <thead>
@@ -46,14 +46,18 @@
                     <tr>
                         <th scope="row">{{-- TODO --}}</th>
                         <td>{{-- TODO --}}</td>
+                        <td>{{-- TODO --}}</td>
+                        <td>{{-- TODO --}}</td>
+                        <td>{{-- TODO --}}</td>
+                        <td>{{-- TODO --}}</td>
                         <td>
                             <form action="{{-- TODO --}}" method="POST">
                                 {{-- TODO --}}
                                 {{-- TODO --}}
-                                <button type="submit" class=" btn btn-danger btn-sm">
+                                {{-- <button type="submit" class=" btn btn-danger btn-sm">
                                     Apagar
-                                </button>
-                                <a class="btn btn-primary btn-sm active" href="{{-- TODO --}}">Detalhes</a>
+                                </button> --}}
+                                <!-- <a class="btn btn-primary btn-sm active" href="{{-- TODO --}}">Detalhes</a> -->
                             </form>
                         </td>
                     </tr>
@@ -66,5 +70,4 @@
     </div>
     {{-- TODO --}}
 </div>
-    
-@endsectionct
+@endsection
