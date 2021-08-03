@@ -17,7 +17,7 @@ class CreateLivrosTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('autor');
-            $table->integer('isbn');
+            $table->string('isbn');
             $table->double('preco');
             $table->string('editora');
             $table->string('lancamento');
