@@ -8,7 +8,7 @@
     </div>
     <div class="row mb-2">
         <div class="col-md-12">
-            <a href="{{-- TODO --}}" class="btn btn-primary active"
+            <a href="{{ route('livros.create') }}" class="btn btn-primary active"
                role="button" aria-pressed="true">Novo Livro</a>
         </div>
     </div>
@@ -25,7 +25,7 @@
     </div>        
     @endif
 
-    {{-- TODO --}}
+    @if (count($livros) > 0)
     <div class="row">
         <div class="col-md-12">
 
@@ -42,32 +42,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- TODO --}}
+                    @foreach ($livros as $l)
                     <tr>
-                        <th scope="row">{{-- TODO --}}</th>
-                        <td>{{-- TODO --}}</td>
-                        <td>{{-- TODO --}}</td>
-                        <td>{{-- TODO --}}</td>
-                        <td>{{-- TODO --}}</td>
-                        <td>{{-- TODO --}}</td>
-                        <td>
-                            <form action="{{-- TODO --}}" method="POST">
-                                {{-- TODO --}}
-                                {{-- TODO --}}
-                                {{-- <button type="submit" class=" btn btn-danger btn-sm">
-                                    Apagar
-                                </button> --}}
-                                <!-- <a class="btn btn-primary btn-sm active" href="{{-- TODO --}}">Detalhes</a> -->
-                            </form>
-                        </td>
+                        <th scope="row">{{ $l->id }}</th>
+                        <td>{{ $l->titulo     }}</td>
+                        <td>{{ $l->autor      }}</td>
+                        <td>{{ $l->isbn       }}</td>
+                        <td>{{ $l->preco      }}</td>
+                        <td>{{ $l->editora    }}</td>
+                        <td>{{ $l->lancamento }}</td>
                     </tr>
-                    {{-- TODO --}}
+                    @endforeach
 
                 </tbody>
             </table>
 
         </div>
     </div>
-    {{-- TODO --}}
+    @endif
 </div>
 @endsection

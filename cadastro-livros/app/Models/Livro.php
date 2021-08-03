@@ -9,3 +9,9 @@ class Livro extends Model
 {
     use HasFactory;
 }
+
+
+
+
+
+

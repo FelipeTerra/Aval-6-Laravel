@@ -14,7 +14,8 @@ class LivroController extends Controller
      */
     public function index()
     {
-        return view('livros.index');
+        $livros = Livro::all();
+        return view('livros.index', compact('livros'));
     }
 
     /**
@@ -24,7 +25,7 @@ class LivroController extends Controller
      */
     public function create()
     {
-        //
+        return view('livros.create');
     }
 
     /**

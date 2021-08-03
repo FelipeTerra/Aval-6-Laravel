@@ -20,7 +20,7 @@ class CreateLivrosTable extends Migration
             $table->integer('isbn');
             $table->double('preco');
             $table->string('editora');
-            $table->date('lancamento');
+            $table->string('lancamento');
             $table->timestamps();
         });
     }
