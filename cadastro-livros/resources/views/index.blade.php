@@ -35,12 +35,16 @@
                         <td>{{ $l->lancamento }}</td>
                     </tr>
                     @endforeach
-
                 </tbody>
             </table>
-
         </div>
     </div>
+    @else
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h5>Nenhum livro cadastrado</h5>
+            </div>
+        </div>
     @endif
 </div>
 
