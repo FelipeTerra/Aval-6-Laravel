@@ -39,6 +39,7 @@
                         <th scope="col">Preço</th>
                         <th scope="col">Editora</th>
                         <th scope="col">Ano de Lançamento</th>
+                        <th scope="col">Ação</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,6 +52,14 @@
                         <td>{{ $l->preco      }}</td>
                         <td>{{ $l->editora    }}</td>
                         <td>{{ $l->lancamento }}</td>
+                        <td>
+                            <form action="{{ route('livros.destroy',  $l->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Apagar</button>
+                                <a class="btn btn-primary btn-sm active" href="{{ route('livros.edit',  $l->id) }}">Editar</a>
+                            </form>
+                        </td>
                     </tr>
                     @endforeach
 

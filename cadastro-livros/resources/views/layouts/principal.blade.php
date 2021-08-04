@@ -14,7 +14,6 @@
     <body>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="{{-- TODO --}}"></a>
             <button class="navbar-toggler"
                 type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +25,7 @@
                         <a class="nav-link" href="{{ route('index') }}">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('livros.index') }}">Cadastrar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{-- TODO --}}">Editar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{-- TODO --}}">Remover</a>
+                        <a class="nav-link" href="{{ route('livros.index') }}">Cadastro de Livros</a>
                     </li>
                 </ul>
                 <span class="navbar-text">

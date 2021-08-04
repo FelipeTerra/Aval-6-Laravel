@@ -6,45 +6,43 @@
     <div class="py-5 text-center">
         <h2>Livros Cadastrados</h2>
     </div>
+
+    @if (count($livros) > 0)
     <div class="row">
-        <!-- Título -->
-        <div class="col-md-2">
-            <h5>Título</h5>
-            {{-- TODO --}}
-        </div>
+        <div class="col-md-12">
 
-        <!-- Autor Principal -->
-        <div class="col-md-2">
-            <h5>Autor Principal</h5>
-            {{-- TODO --}}
-        </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Autor Principal</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Editora</th>
+                        <th scope="col">Ano de Lançamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($livros as $l)
+                    <tr>
+                        <th scope="row">{{ $l->id }}</th>
+                        <td>{{ $l->titulo     }}</td>
+                        <td>{{ $l->autor      }}</td>
+                        <td>{{ $l->isbn       }}</td>
+                        <td>{{ $l->preco      }}</td>
+                        <td>{{ $l->editora    }}</td>
+                        <td>{{ $l->lancamento }}</td>
+                    </tr>
+                    @endforeach
 
-        <!-- ISBN -->
-        <div class="col-md-2">
-            <h5>ISBN</h5>
-            {{-- TODO --}}
-        </div>
-        
-        <!-- Preço -->
-        <div class="col-md-2">
-            <h5>Preço</h5>
-            {{-- TODO --}}
-        </div>
+                </tbody>
+            </table>
 
-        <!-- Editora -->
-        <div class="col-md-2">
-            <h5>Editora</h5>
-            {{-- TODO --}}
         </div>
-
-        <!-- Ano de Lançamento -->
-        <div class="col-md-2">
-            <h5>Ano Lançamento</h5>
-            {{-- TODO --}}
-        </div>
-
-
     </div>
+    @endif
 </div>
-    
+
+
 @endsection

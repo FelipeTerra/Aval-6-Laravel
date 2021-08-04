@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Livro;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -14,6 +15,7 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('index');
+        $livros = Livro::all();
+        return view('index', compact('livros'));
     }
 }
