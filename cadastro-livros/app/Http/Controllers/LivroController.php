@@ -40,6 +40,7 @@ class LivroController extends Controller
             [ 
                 'titulo'   => 'required|min:2|unique:livros',
                 'autor'    => 'required|min:5',
+                'preco'    => 'required|numeric|gt:0',
                 'editora'  => 'required|min:5',
             ],
             [
@@ -48,6 +49,9 @@ class LivroController extends Controller
                 'titulo.unique'     => 'Título já cadastrado',
                 'autor.required'    => 'O nome do autor é obrigatório',
                 'autor.min'         => 'O nome do autor deve ter no mínimo cinco letras',
+                'preco.required'    => 'O preço é obrigatório',
+                'preco.numeric'     => 'O preço deve ser um valor numérico',
+                'preco.gt'          => 'O preço é deve ser maior que zero',
                 'editora.required'  => 'O nome da editora é obrigatório',
                 'editora.min'       => 'O nome da editora deve ter no mínimo cinco letras',
             ]
